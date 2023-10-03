@@ -51,7 +51,7 @@ async def main(sunspec):
 
 			# Update power limit
 			limit = sunspec.powerlimit()
-			host.write_single_register(3049,
+			host.write_single_register(1, 3049,
 				10000 if limit is None else limit * 100)
 
 		except OSError:
